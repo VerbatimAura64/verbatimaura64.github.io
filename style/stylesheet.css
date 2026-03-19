@@ -29,6 +29,7 @@ body {
     justify-content: center;
     padding: 4rem;
     max-width: 800px;
+    padding-top: 6rem;
 }
 
 .hero-tag {
@@ -104,12 +105,13 @@ h1 {
 
 .navbar li {
 		display: inline;
-        color: var(--accent);
         font-family: var(--font-mono);
-        font-size: 11px;
-        font-weight: bold;
-        text-transform: uppercase;
+        font-size: .8rem;
+        color: #0e0e0f;
         text-decoration: none;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        transition: color .2s;
 }
 
 
@@ -152,6 +154,7 @@ nav {
     background: rgba(14, 14, 15, 0.85);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
+    
 
 }
 
@@ -163,6 +166,7 @@ nav {
     letter-spacing: 0.05em;
 }
 
+/* Deprecated styling
 .nav-links {
     font-family: var(--font-mono);
     font-size: .8rem;
@@ -171,13 +175,14 @@ nav {
     letter-spacing: .08em;
     text-transform: uppercase;
     transition: color .2s;
-}
+}*/
 
 /* Dropdown Button */
 .dropbtn {
+    
     font-family: var(--font-mono);
     font-size: 0.85rem;
-    color: var(--accent);
+    color: var(--bg);
     text-decoration: none;
     letter-spacing: 0.05em;
     background-color: #0e0e0f;
@@ -185,12 +190,22 @@ nav {
     padding: 16px;
     border: none;
     cursor: pointer;
+    backdrop-filter: blur(12px);
+}
+
+
+
+.dropbtn a:visited {
+    color: var(--accent);
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
+    text-decoration: none;
+    color: var(--bg);
+    backdrop-filter: blur(12px);
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -199,25 +214,174 @@ nav {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
+    text-decoration: none;
+    color: var(--bg);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    backdrop-filter: blur(12px);
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
+    color: var(--bg);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: var(--accent);
+}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+    color: var(--accent);
+    text-decoration: none;
 }
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: var(--accent);
+    backdrop-filter: blur(12px);
+    
 }
+
+.dropdown:hover .dropbtn a{
+    color: var(--bg);
+}
+
+#projects {
+    background: var(--surface);
+    padding: 6rem 4rem;
+}
+
+.projects-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-tag {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--accent);
+    letter-spacing: -.15em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: var(--text)
+}
+
+.section-intro{
+    color: var(--muted);
+    max-width: 55ch;
+    margin-bottom: 3.5rem;
+    font-size: 1rem;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.project-card{
+    background: var(--bg);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: background 0.2s;
+}
+
+.project-card:hover{
+    background: var(--surface);
+}
+
+.project-tag {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    color: var(--text);
+    line-height: 1.2;
+}
+
+.project-card p{
+    font-size: .9rem;
+    color: var(--muted);
+    line-height: 1.65;
+    flex: 1;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+
+.tech-pill {
+    font-family: var(--font-mono);
+    font-size: .7rem;
+    padding: .25rem .6rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--muted);
+}
+
+.project-link {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent);
+    text-decoration: none;
+    margin-top: auto;
+    transition: opacity .2s;
+}
+
+.project-link:hover{
+    opacity: .7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
