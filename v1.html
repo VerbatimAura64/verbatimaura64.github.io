@@ -1,35 +1,10 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <title>JavaScript Intro Page Part 2</title>
-	<link type="text/css" rel="stylesheet" href="/~walonzo/style/stylesheet.css"/>
-    <style type="text/css">
-	input {
-        font-size: 18pt;
-        color: white;
-        background:  #000066;
-      }
-      a:link {
-        color: blue;
-      }
-      
-      .large {
-        font-weight: bold;
-        font-size:   200%;
-      }
-      .small {
-        font-size:   80%;
-      }
-    </style>
-    <script type="text/javascript">
-      var message1 = "Thanks I worked really hard to put it together!"
-
-      var message2 = "Well you're not very nice now are you?" 
-					 
-      var message3 = "You can't go living your life without an opinion you know."
-					 
-	  var message4 = "Yeah you can and you just did."
-    /* When the user clicks on the button, 
+<html>
+<head>
+<title>Homepage</title>
+<link type="text/css" rel="stylesheet" href="/stylesheet.css"/>
+<script>
+/* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -57,12 +32,7 @@ window.onclick = function(event) {
 </script>
 </head>
 <body>
-<nav>
-		<a href="/index.html#home" class="nav-logo">walonzo.dev</a>
-		<ul class ="nav-links"></ul>
-
-
-	<div class="navbar">
+<div class="navbar">
 		<li> <div class="dropdown">
 				<button onclick="myFunction()" class="dropbtn"><a href="/index.html">Home</a></button>
 				<div id="myDropdown" class="dropdown-content">
@@ -92,19 +62,79 @@ window.onclick = function(event) {
 		</li>
 	</div>
 	</nav>
-		<hr>
-  <p>
-  <span class="large">How do you like my page so far?</span>
-  <span class="small">Please be honest.</span>
-  
 
-  </p><form>
-    <input type="button" onclick="alert(message1)" value="Looks Good!">
-    <input type="button" onclick="alert(message2)" value="Looks Bad!">
-    <input type="button" onclick="alert(message3)" value="Indifferent...">
-	<input type="button" onclick="alert(message4)" value="I can click stuff?">
-  </form>
-  
+<hr>
+
+<div class="top">
+<p>This is the homepage of William Alonzo</p>
+
+<p> I am a student of SUNY Oswego. I am majoring in Creative Writing.</p>
+
+</div>
+
+<div class="pic">
+
+<img src="/~walonzo/images/sunny-days.jpg">
+
+</div>
+
+<div class="Assignment1">
+
+<h3>Courses</h3>
+
+<p> Click on the link below to look at all my coursework</p>
+
+<ul>
+	<li> <a href="coursework/index.html"> Coursework </a> </li>
+</ul>
+
+</div>
+
+<hr>
+
+<div class="mystuff">
+<h3>Hello!</h3>
+
+<p>Say Hello!</p>
+
+<ul>
+	<li> <a href="hello.html"> Hello World! </a> </li>
+</ul>
+
+<hr>
+
+<h3>Creative Work</h3>
+
+<p>Click on the link below to check out my creative work.</p>
+
+<ul>
+	<li> <a href="interactive_story/index.html"> Creative Work </a> </li>
+</ul>
+
+<hr>
+
+<h3>Testing</h3>
+
+<p>Testing the waters.</p>
+
+<ul>
+	<li> <a href="testing/test.html"> Test </a> </li>
+</ul>
+
+<hr>
+
+<h3>What's your name?</h3>
+
+<p>Do you know your name?</p>
+
+<ul>
+	<li> <a href="interactive_story/info.html"> Give me my name. </a> </li>
+</ul>
+
+<hr>
+
+</div>
+
 
 
 </body>
