@@ -1,6 +1,100 @@
+:root {
+    --bg: #0e0e0f;
+    --surface: #161618;
+    --border: #2a2a2e;
+    --text: #e8e6e1;
+    --muted: #7a7880;
+    --accent: #C89933;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+		background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-display);
+        line-height: 1.7;
+}
+
+.hero-inner {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    max-width: 800px;
+}
+
+.hero-tag {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: clamp(3rem,6vw,6rem);
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+.hero-desc {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 48ch;
+    margin-bottom: 2.5rem;
+}
+
+.hero-cta{
+    display: flex;
+    gap: 1rem;
+}
+
+.btn{
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    padding: 0.85rem 1.75rem;
+    text-decoration: none;
+    border: 1px solid;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--muted);
+    border-color: var(--border);    
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--accent);
+}
+
+.btn-secondary:hover {
+    background: var(--muted);
+    color: var(--text);
+}
+
 
 .navbar  {
-		color: #5a5a5a;
+		color: #0e0e0f;
 		font-size: 11px;
 		font-weight: bold;
 		text-transform: uppercase;
@@ -11,9 +105,7 @@
 		display: inline;
 }
 
-body {
-		background-color: #C6E2FF;
-}
+
 
 p {
 		size:16px;
@@ -42,8 +134,8 @@ h1 {
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: #C6E2FF;
-    color: black;
+    background-color: #0e0e0f;
+    color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -83,5 +175,5 @@ h1 {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #7d8e3e;
 }
