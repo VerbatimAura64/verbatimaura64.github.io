@@ -15,6 +15,9 @@
     padding: 0;
 }
 
+.thumbnail a {
+    color: var(--muted);
+}
 body {
 		background-color: var(--bg);
         color: var(--text);
