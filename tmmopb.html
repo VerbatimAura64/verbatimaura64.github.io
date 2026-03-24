@@ -1,0 +1,185 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TMMOPB - William Alonzo</title>
+	<link rel="stylesheet" href="/style/stylesheet.css"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+		
+
+
+</head>
+<body>
+	<nav>
+		<a href="/index.html#home" class="nav-logo">walonzo.dev</a>
+		<ul class ="nav-links">
+            <li><a href="/index.html#projects">Projects</a></li>
+            <li><a href="/index.html#about">About</a></li>
+            
+            <li class="nav-more">
+                <button class="nav-more-btn">More ▾</button>
+                <ul class="nav-dropdown">
+                    <li><a href="/coursework/index.html">Coursework</a></li>
+                    <li><a href="/interactive_story/index.html">Creative Work</a></li>
+                    <li class="nav-dropdown-label">Case Studies</li>
+                    <li><a href="/tapped-out.html">Tapped Out</a></li>
+                    <li><a href="/cybercity-runner.html">Cybercity Runner</a></li>
+                    <li><a href="/tmmpob.html">TMMOPB</a></li>
+                </ul>
+            </li>
+            <li><a href="/index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="cs-hero">
+        <div class="cs-hero-inner">
+            <a href="./index.html" class="cs-back">← Back to Portfolio</a>
+            <span class="section-tag">Case Study</span>
+            <h1>The Magnificent Misadventures of Poddles and Bowlber</h1>
+            <p class="cs-subtitle"> Battling between chaos and curiosity, and 
+									realizing when to let each win for two unique characters.
+			</p>
+            <div class="cs-meta">
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Engine</span>
+                    <span>Unity</span>
+                </div>
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Language</span>
+                    <span>C#</span>
+                </div>
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Timeline</span>
+                    <span>Solo Project</span>
+                </div>
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Status</span>
+                    <span>Shipped</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+	<section id="cs-overview">
+		<div class="cs-content-inner">
+			<span class="section-tag">Overview</span>
+			<p>The Magnificent Misadventures of Poddles and Bowlber came as my in between when 
+				I was working on CyberCity Runner and Tapped Out. When I first came back to it, I
+				had no idea where I had left off except for some wonky code that seemed to work in 
+				varying parts and conditions. So I took that to work and let each varying piece work
+				for what it wanted to do. Bowlber could move really fast that you might miss the jump
+				between platforms where Poddles could form great leaps or heroism but moved slow enough
+				that he could be caught falling with the platform. Both abilities were something I wanted
+				to give to one character, but each skill would lock out the other if applied on one character,
+				and from one, came TWO new characters!
+			</p>
+		</div>
+	</section>
+
+	<section id="cs-challenge">
+		<div class="cs-content-inner">
+			<span class="section-tag">The Challenge</span>
+			<p>Working with legacy code you haven't read in a while or practiced is a skill on it own.
+				Working with your own legacy code that you didn't bother to document or annotate is another,
+				and it's why I couldn't figure out why my original character couldn't just earn the ability 
+				to sprint for a few seconds or why he couldn't have a super jump if he could double jump. 
+				Item generation would only work when the player had specific abilities because the platforms
+				 had to adapt to whether the player was moving slower or if they could jump farther. 
+				</p>
+			<div class="cs-callout">
+				<span class="cs-callout-label">Core Problem</span>
+				<p>When your obstacles and rewards are dependent on your character's abilities, 
+					you ought to make sure those abilities can pull through.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="cs-solution">
+		<div class="cs-content-inner">
+			<span class="section-tag">My Solution</span>
+			<p>I figured if I can't have one character have both abilities, why not have two
+				characters have each ability. I saw more stable play throughs, quicker iterations
+				that solved platform regeneration and item randomization without risking the reward
+				factor of having to collect all the gems before the platform fell. No longer trying to
+				time when to jump with Bowlber because platform generation became faster and the gaps 
+				became shorter to accomodate his speed, but his lack of air. Poddles was soaring through
+				the clouds like the raindrop he is to reach new heights and earn more gems.
+			</p>
+			<p>One thing I was able to grant both characters was the ability to 
+				double jump, as well as the ability to walk off a platform and still jump.
+				The classic Coyote Time.  :</p>
+			<div class="cs-code">
+				<pre>if (jump){
+    groundCounter();
+    if (grounded)
+    {
+        anim.SetTrigger("Jump");
+        rb2d.AddForce(new Vector2(0f, jumpForce));
+        jump = false;
+        canDoubleJump = true;
+    }
+    else
+    {
+        if (canDoubleJump)
+        {
+            anim.SetTrigger("Jump");
+            rb2d.AddForce(new Vector2(0f, doubleJumpForce));
+            jump = false;
+            canDoubleJump = false;
+        }
+    }
+}</pre>
+			</div>
+			<p>In the end, being able to use their abilities to traverse the levels in their own
+				unique manner gave them their own strengths. Trying to introduce different challenges and
+				obstacles per character and level just unfolded and the possibilities had become a wide range
+				of options now.
+			</p>
+		</div>
+	</section>
+
+	<section id="cs-retrospective">
+		<div class="cs-content-inner">
+			<span class="section-tag">Retrospective</span>
+		<p>What worked, and what I'd do differently.</p>
+		<div class="cs-retro-grid">
+			<div class="cs-retro-card cs-retro-good">
+				<span class="cs-retro-label">What Worked</span>
+				<ul>
+					<li>Unique character abilities — gave the game a good feel
+						in deciding how you wanted to play.
+					</li>
+					<li>Platform generation and item spawning are part of a system I
+						want to continue to use moving forward in other platformers.
+					</li>
+				</ul>
+			</div>
+			<div class="cs-retro-card cs-retro-change">
+				<span class="cs-retro-label">What I'd Change</span>
+				<ul>
+					<li>Level progression could be improved to save
+						players stats and scores per level.
+					</li>
+					<li>Could use more item randomization and power ups instead
+						of single chance reward or dangerous items.
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<section id="cs-footer">
+		<div class="cs-content-inner">
+			<a href="https://harborviewgames.itch.io/the-magnificent-misadventures-of-poddles-bowlber" 
+			class="btn btn-primary">Play TMMOPB on itch.io →</a>
+			<a href="./index.html" class="btn btn-secondary">Back to Portfolio</a>
+		</div>
+	</section>
