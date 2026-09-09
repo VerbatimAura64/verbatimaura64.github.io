@@ -96,7 +96,7 @@
 				<button class="tablinks" onclick="openWork(event, 'game-jams')">Jams</button>
 				<button class="tablinks" onclick="openWork(event, 'in-progress')">In Dev</button>
 				<button class="tablinks" onclick="openWork(event, 'collaborative')">Collabs</button>
-				<button class="tablinks" onclick="openWork(event, 'swe')">SWE</button>
+				<button class="tablinks" onclick="openWork(event, 'swd')">SWE</button>
 			</div>
 
 			<div id="All" class="tabcontent" style="display:block">
@@ -298,11 +298,54 @@
 						<a href="/case_study/gametools.html" class="project-link">Read Case Study →</a>
 						<a href="https://github.com/verbatimaura64/gametools" class="project-link">View on GitHub →</a>
 					</div>
+					<div class="project-card">
+						<span class="project-tag">2D Platformer · Unity</span>
+						<div class="cs-screenshot"><img src="/images/TMMOPB.png" alt="TMMOPB gameplay Title"></div>
+
+						<h3>Poddles & Bowlber</h3>
+						<p>Architected a character-selection system with diverging level layouts and ability sets from a
+							shared codebase.
+							Built procedural item generation tied to platform spawn events, balancing randomness with
+							pacing constraints across distinct playthroughs per character.
+						</p>
+						<div class="project-tech">
+							<span class="tech-pill">Unity</span>
+							<span class="tech-pill">C#</span>
+							<span class="tech-pill">Level Design</span>
+							<span class="tech-pill">Procedural Generation</span>
+						</div>
+						<a href="/case_study/tmmopb.html" class="project-link">Read Case Study →</a>
+						<a href="https://harborviewgames.itch.io/the-magnificent-misadventures-of-poddles-bowlber"
+							class="project-link">Play on itch.io</a>
+					</div>
+					<div class="project-card">
+						<span class="project-tag">Hide-and-Seek · Unreal Engine 5</span>
+						<div class="cs-screenshot">
+							<img src="/images/zoneclear.png" alt="Zone Clear screenshot">
+						</div>
+						<h3>Zone Clear</h3>
+						<p>I prototyped ZoneClear's core loop in Unity, shipped as Owed — gated zones that resolve based
+							on player interaction with a target object, driven by a player controller and a central game
+							manager. That prototype became the foundation for HarborView GameTools, and I'm now
+							rebuilding
+							the zone-gating system in Unreal using C++, which is what this case study documents. Owed is
+							playable now; the Unreal version is in active development.
+						</p>
+						<div class="project-tech">
+							<span class="tech-pill">Unreal</span>
+							<span class="tech-pill">C++</span>
+							<span class="tech-pill">Population Systems</span>
+							<span class="tech-pill">Line Trace Interaction</span>
+						</div>
+						<a href="/case_study/zoneclear.html" class="project-link">Read Case Study →</a>
+						<a href="https://harborviewgames.itch.io/owed" class="project-link">Play Owed (Unity Prototype)
+							on itch.io</a>
+					</div>
 				</div>
 			</div>
-		
-		<div class="projects-inner"></div>
-			<div id="shipped-projects" class="tabcontent" style="display:block">
+		</div>
+		<div class="projects-inner">
+			<div id="shipped-projects" class="tabcontent" style="display:none">
 				<h2>Shipped Projects</h2>
 				<p class="section-intro">
 					Games released solo on itch.io. Each one taught me
@@ -381,9 +424,8 @@
 				</div>
 			</div>
 		</div>
-		
+	
 		<div class="projects-inner">
-			<!--<span class = "section-tag">Collaborative</span> -->
 			<div id="collaborative" class="tabcontent">
 				<h2>Team Projects </h2>
 				<p class="section-intro">
@@ -494,14 +536,12 @@
 			</div>
 		</div>
 		<div class="projects-inner">
-			<!--span class = "section-tag">In Progress</span-->
 			<div id="in-progress" class="tabcontent">
 				<h2>In Progress</h2>
 				<p class="section-intro">
 					Active work, not yet complete
 				</p>
 				<div class="projects-grid">
-					<!--Owed, HVGT-->
 					<div class="project-card">
 						<span class="project-tag">2D Platformer · Unity</span>
 						<div class="cs-screenshot"><img src="/images/TMMOPB.png" alt="TMMOPB gameplay Title"></div>
@@ -549,13 +589,13 @@
 			</div>
 		</div>
 		<div class="projects-inner">
-			<!--span class="section-tag">Software Engineering</span-->
-			<h2>Shipped Projects</h2>
-			<p class="section-intro">
-				Applying practical principals for recognizable solutions
-			</p>
-			<div class="projects-grid">
-				<div class="project-card">
+			<div id="swd" class="tabcontent">
+				<h2>Shipped Projects</h2>
+				<p class="section-intro">
+					Applying practical principals for recognizable solutions
+				</p>
+				<div class="projects-grid">
+					<div class="project-card">
 					<span class="project-tag">Java · IntelliJ</span>
 					<div class="cs-screenshot">
 						<img src="/images/Application.jpg" alt="Application screenshot">
@@ -571,8 +611,8 @@
 						<span class="tech-pill">Maven</span>
 					</div>
 					<a href="/case_study/job-hunting.html" class="project-link">Read Case Study →</a>
-				</div>
-				<div class="project-card">
+					</div>
+					<div class="project-card">
 					<span class="project-tag">C# · Unity Editor API</span>
 					<div class="cs-screenshot">
 						<img src="/images/tools.png" alt="HarborView GameTools custom Inspector screenshot">
@@ -590,6 +630,7 @@
 					</div>
 					<a href="/case_study/gametools.html" class="project-link">Read Case Study →</a>
 					<a href="https://github.com/verbatimaura64/gametools" class="project-link">View on GitHub →</a>
+					</div>
 				</div>
 			</div>
 		</div>

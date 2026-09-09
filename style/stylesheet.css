@@ -434,7 +434,7 @@ h2 {
 
 #about {
     padding: 6rem 4rem;
-    background: var(--surface);
+    background: var(--bg);
 
 }
 
@@ -486,7 +486,7 @@ h2 {
 
 #contact {
     padding: 6rem 4rem;
-    background: var(--bg);
+    background: var(--surface);
 }
 
 .contact-inner {
@@ -531,7 +531,7 @@ h2 {
 
 #easter-egg {
     padding: 6rem 4rem;
-    background: var(--surface);
+    background: var(--bg);
 }
 
 .inner-egg{
