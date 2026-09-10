@@ -434,7 +434,7 @@ h2 {
 
 #about {
     padding: 6rem 4rem;
-    background: var(--bg);
+    background: var(--surface);
 
 }
 
@@ -486,7 +486,7 @@ h2 {
 
 #contact {
     padding: 6rem 4rem;
-    background: var(--surface);
+    background: var(--bg);
 }
 
 .contact-inner {
@@ -512,7 +512,7 @@ h2 {
     text-decoration: none;
     color: var(--text);
     font-size: 0.9rem;
-    transition: background .2s;
+    transition: width .2s;
 }
 
 .contact-link:hover{
@@ -531,7 +531,7 @@ h2 {
 
 #easter-egg {
     padding: 6rem 4rem;
-    background: var(--bg);
+    background: var(--surface);
 }
 
 .inner-egg{
@@ -856,7 +856,6 @@ color: var(--accent);
 /*Styling the Work Tabs */
 .tab {
     overflow: hidden;
-    
     background: var(--surface);
     margin-bottom: 2.5rem;
 }
