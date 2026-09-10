@@ -866,7 +866,7 @@ color: var(--accent);
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--muted);
-    background-color: transparent;
+    background-color: var(--bg);
     float: left;
     border: 1px solid var(--border);
     outline: none;
