@@ -753,32 +753,33 @@ color: var(--accent);
     color:var(--accent);
 }
 
-.footer {
+footer {
     width: 100%;
     padding: 100px 15%;
     display: flex;
     box-sizing: border-box;
-    background: var(--surface);
+    background: var(--bg);
 }
 
 .footer div {
     text-align: center;
 }
 
-.footer div {
-    text-align: center;
-}
-
-.col-1 a {
+.foot-col a {
     display: block;
     text-decoration: none;
     color: var(--accent);
 }
 
-.col-2 {
+.foot-col-2 {
     flex-grow: 1;
 }
 
+.foot-col-2 a{
+    display: block;
+    text-decoration: none;
+    color: var(--accent);
+}
 /* CASE STUDY — IMAGE STYLES */
 
 /* Single image — full width within content column */
