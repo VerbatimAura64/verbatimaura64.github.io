@@ -759,10 +759,10 @@ footer {
     display: flex;
     box-sizing: border-box;
     background: var(--bg);
-    border-top:solid;
+    border-top: 1px solid var(--border);
 }
 
-.footer div {
+footer div {
     text-align: center;
 }
 
