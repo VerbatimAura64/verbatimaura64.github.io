@@ -755,10 +755,11 @@ color: var(--accent);
 
 footer {
     width: 100%;
-    padding: 100px 15%;
+    padding: 40px 15%;
     display: flex;
     box-sizing: border-box;
     background: var(--bg);
+    border-top:solid;
 }
 
 .footer div {
