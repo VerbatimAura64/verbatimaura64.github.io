@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Devlogs - William Alonzo</title>
+    	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
+		    rel="stylesheet" />
+        <link rel="icon" type="image/x-icon" href="/images/W.png" />
+        <link rel="stylesheet" href="/style/stylesheet.css" />
+
+
+	<script>
+
+		async function getDevlogs() {
+			const url = "/devlogs/posts.json";
+			try {
+				const response = await fetch(url);
+				if (!response.ok) {
+					throw new Error (`Response status:  ${response.status}`);
+				}
+
+				const result = await response.json();
+				console.log(result);
+			} catch (error) {
+				console.error(error.message);
+			}
+		}
+
+
+
+	</script>
+</head>
+
+<body>
+	<nav>
+		<a href="/index.html#home" class="nav-logo">walonzo.dev</a>
+		<button class="nav-toggle" aria-label="Toggle menu"
+			aria-expanded="false"><span></span><span></span><span></span></button>
+		<ul class="nav-links">
+			<li><a href="/index.html#projects">Projects</a></li>
+			<li><a href="/index.html#about">About</a></li>
+
+			<li class="nav-more">
+				<button class="nav-more-btn">More ▾</button>
+				<ul class="nav-dropdown">
+					<li><a href="/Resume.pdf" target ="_blank" rel="noopener noreferrer">Resume</a></li>
+					<li><a href="/coursework/index.html">Coursework</a></li>
+					<li><a href="/interactive_story/index.html">Creative Work</a></li>
+					<li class="nav-dropdown-label">Case Studies</li>
+					<li><a href="/case_study/toxic-piracy.html">Toxic Piracy</a></li>
+					<li><a href="/case_study/project-dunwell.html">Project Dunwell</a></li>
+					<li><a href="/case_study/tapped-out.html">Tapped Out</a></li>
+					<li><a href="/case_study/job-hunting.html">Job Hunt</a></li>
+
+				</ul>
+			</li>
+			<li><a href="/index.html#contact">Contact</a></li>
+		</ul>
+	</nav>
+
+	<section id="home">
+		<div class ="header">
+			<h2>Will's Devlogs</h2>
+		</div>
+
+	</section>
+
+	<section id="Logs">
+		<div class="row">
+			<div class="leftcol">
+				<div class="card">
+					<h2>Title Heading</h2>
+					<h5>Summary, Date</h5>
+					<div class="placeholder" style="height: 200px;">Image</div>
+					<p> Some Text...</p>
+					<p> Some more text ....</p>
+				</div>
+			</div>
+			<div class="rightcol">
+				<div class="card">
+					<h2>About me</h2>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+
+	<section id="about">
+		
+	</section>
+
+	<section id="contact">
+
+	</section>
+
+	<section id="easter-egg">
+		
+	</section>
+
+	<script src="/script.js" defer></script>
+	<footer>
+		<div class ="foot-col-2"><h3>William Alonzo</h3>
+			<p>Gameplay Programmer looking for his next role.
+				<br>6+ years in Unity, various completed projects,
+				<br>based in Los Angeles, looking to bring my skills 
+				<br>to a studio that cares about craft.
+			</p>
+		</div>
+		<div class ="foot-col-2">
+			<h3>Quick Links</h3>
+			<a href="/index.html#home">Home</a>
+			<a href="/index.html#projects">Projects</a>
+			<a href="/index.html#about">About</a>
+			<a href="/case_study/">Case Studies</a>
+				
+		</div>
+		<div class ="foot-col-2"><h3>Get in Touch</h3>
+			<a href="mailto:walonzo64@outlook.com">Email</a>
+			<a href="https://github.com/verbatimaura64">GitHub</a>
+			<a href="https://www.linkedin.com/in/william-alonzo-76954a111/">LinkedIn</a>
+			<a href="https://harborviewgames.itch.io">itch.io</a>
+		</div>
+	</footer>
+</body>
+</html>
