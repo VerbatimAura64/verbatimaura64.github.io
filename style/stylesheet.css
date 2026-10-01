@@ -766,12 +766,6 @@ footer div {
     text-align: center;
 }
 
-.foot-col a {
-    display: block;
-    text-decoration: none;
-    color: var(--accent);
-}
-
 .foot-col-2 {
     flex-grow: 1;
 }
@@ -781,6 +775,64 @@ footer div {
     text-decoration: none;
     color: var(--accent);
 }
+
+/* DEV LOG CARD STYLING */
+
+.devCard {
+    border-bottom: 2px solid var(--border);   
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    margin-left: 60px;
+}
+
+.devCard:last-child{
+    border-bottom: none;  
+}
+
+.devCard:first-child{
+    border-top: 2px solid var(--border);
+    padding-top: 30px;  
+    
+}
+
+.devCard a {
+    display: inline-block;
+    padding: 5px;
+    margin-right: 10px;
+    border: 2px solid var(--border);
+    text-decoration: none;
+    color: var(--surface);
+    background-color: var(--accent);
+}
+
+.devCard a:hover{
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.post-date {
+    color: var(--muted);
+    font-size: small;
+}
+
+.hook {
+    font-size: large;
+    font-weight: 700;
+    display: block;
+}
+
+.dev-post {
+    color: var(--text);
+    font-weight: 300;
+}
+
+.devCard img{
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    display: block;
+}
+
 /* CASE STUDY — IMAGE STYLES */
 
 /* Single image — full width within content column */

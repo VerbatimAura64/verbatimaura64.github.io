@@ -25,33 +25,44 @@
 				}
 
 				const posts = await response.json();
-				const container = document.getElementById("container");
+
+				posts.sort((a,b) => b.datePosted.localeCompare(a.datePosted));
+			
+				
 				posts.forEach(post => {
 					const card = document.createElement("div");
 					card.setAttribute("class", "devCard");
 					card.setAttribute("id", post.slug);
 					
 					const heading = document.createElement("h2");
+					heading.setAttribute("class", "post-title")
 					heading.textContent = post.title;
 
 					const summary = document.createElement("span");
+					summary.setAttribute("class", "hook");
 					summary.textContent = post.summary;
 
 					const datePost = document.createElement("span");
-					datePost.textContent = post.datePosted;
+					datePost.setAttribute("class", "post-date");
+					datePost.textContent = " " + post.datePosted;
 
 					const content = document.createElement("p");
+					content.setAttribute("class", "dev-post");
 					content.textContent = post.content;
 					
 					
 					card.appendChild(heading);
+					card.appendChild(summary);	
 					card.appendChild(datePost);
-					card.appendChild(summary);					
+									
 					card.appendChild(content);					
+					
 					post.images.forEach(img =>{
-						const image = document.createElement("img");
-						image.src = img;
-						card.appendChild(image);
+						if(img){
+							const image = document.createElement("img");
+							image.src = img;
+							card.appendChild(image);
+						}
 					});
 
 					if(post.caseLink){
@@ -79,6 +90,7 @@
 </head>
 
 <body>
+	
 	<nav>
 		<a href="/index.html#home" class="nav-logo">walonzo.dev</a>
 		<button class="nav-toggle" aria-label="Toggle menu"
@@ -114,39 +126,11 @@
 
 	<section id="Logs">
 		<div id="container"></div>
-		
-		<div class="row">
-			<div class="leftcol">
-				<div class="card">
-					<h2>Title Heading</h2>
-					<h5>Summary, Date</h5>
-					<div class="placeholder" style="height: 200px;">Image</div>
-					<p> Some Text...</p>
-					<p> Some more text ....</p>
-				</div>
-			</div>
-			<div class="rightcol">
-				<div class="card">
-					<h2>About me</h2>
-				</div>
-			</div>
-		</div>
+		<script>getDevlogs()</script>
+	
 		
 	</section>
 
-	<section id="about">
-		
-	</section>
-
-	<section id="contact">
-
-	</section>
-
-	<section id="easter-egg">
-		
-	</section>
-
-	<script src="/script.js" defer></script>
 	<footer>
 		<div class ="foot-col-2"><h3>William Alonzo</h3>
 			<p>Gameplay Programmer looking for his next role.
