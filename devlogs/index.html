@@ -37,43 +37,40 @@
 					const summary = document.createElement("span");
 					summary.textContent = post.summary;
 
-					const image = document.createElement("img");
-					//image.src = item.images;
-
 					const datePost = document.createElement("span");
 					datePost.textContent = post.datePosted;
 
 					const content = document.createElement("p");
 					content.textContent = post.content;
 					
-					const link = document.createElement("a");
-					link.setAttribute('href', post.links);
-
+					
 					card.appendChild(heading);
 					card.appendChild(datePost);
-					card.appendChild(summary);
-					card.appendChild(image);
-					card.appendChild(content);
-					card.appendChild(link);
+					card.appendChild(summary);					
+					card.appendChild(content);					
+					post.images.forEach(img =>{
+						const image = document.createElement("img");
+						image.src = img;
+						card.appendChild(image);
+					});
+
+					if(post.caseLink){
+						const cslink = document.createElement("a");
+						cslink.textContent = "Read the case study here";
+						cslink.setAttribute('href', post.caseLink);
+						card.appendChild(cslink);
+					}
+					if(post.playLink){
+						const playlink = document.createElement("a");
+						playlink.textContent = "Playtest it here";
+						playlink.setAttribute('href', post.playLink);
+						card.appendChild(playlink);
+					}
 					container.appendChild(card);
 				})
-
-								
-				//console.log(result);
 			} catch (error) {
 				console.error(error.message);
 			}
-			/*const jsonData = [ {"title": "FirstItem",
-								"summary": "desc",
-								"slug": "identifier",
-								"links": "link",
-								"images": "image",
-								"datePosted": "date",
-								"content": "devlog"	}];*/
-			
-
-		
-
 		}
 
 

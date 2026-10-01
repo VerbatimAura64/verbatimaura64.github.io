@@ -1,7 +1,16 @@
 [{"title":"test title", 
 "summary":"I'm testing posts",
 "slug":"test-post",
-"links":"linky",
-"images":"no-image", 
+"playLink": "link to demo",
+"caseLink": "link to case",
+"images": ["no-image"], 
 "datePosted":"2026-09-30",
-"content":"Applied two months ago, never heard back, Job Still Open, Reapplied"}]
+"content":"Applied two months ago, never heard back, Job Still Open, Reapplied"},
+{"title":"2nd title", 
+"summary":"I'm testing 2 posts",
+"slug":"test-post-2",
+"links": null ,
+"images": ["no-image", "still no image"], 
+"datePosted":"2026-09-17",
+"content":"Applied three months ago,  heard back, No Offer"}
+]
