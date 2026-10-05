@@ -62,7 +62,12 @@ body {
     background: var(--bg);
     padding: 6rem 4rem;
 }
-
+ #top {
+    background: var(--bg);
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    margin-left: 3rem;
+ }
 .hero-inner {
     min-height: 100vh;
     display: flex;
@@ -779,21 +784,19 @@ footer div {
 /* DEV LOG CARD STYLING */
 
 .devCard {
-    border-bottom: 2px solid var(--border);   
-    padding-bottom: 30px;
-    margin-bottom: 40px;
-    margin-left: 60px;
+    border: 2px solid var(--border);   
+    background: var(--bg);
+    padding: 20px;
 }
 
-.devCard:last-child{
-    border-bottom: none;  
+#container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: var(--surface);
+    padding: 30px;
 }
 
-.devCard:first-child{
-    border-top: 2px solid var(--border);
-    padding-top: 30px;  
-    
-}
 
 .devCard a {
     display: inline-block;
@@ -831,6 +834,7 @@ footer div {
     height: auto;
     margin-top: 15px;
     display: block;
+    padding: 20px;
 }
 
 /* CASE STUDY — IMAGE STYLES */
@@ -976,6 +980,14 @@ footer div {
     .cs-image-pair .cs-image img {
         height: 320px;
     }
+
+    #container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 1fr);
+        gap: 20px;
+        background: var(--surface);
+        padding: 30px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -1053,6 +1065,10 @@ footer div {
     }
 
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #container {
         grid-template-columns: 1fr;
     }
 
