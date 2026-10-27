@@ -39,7 +39,7 @@
 					heading.setAttribute("class", "post-title")
 					heading.textContent = post.title;
 
-					const summary = document.createElement("span");
+					const summary = document.createElement("summary");
 					summary.setAttribute("class", "hook");
 					summary.textContent = post.summary;
 
@@ -54,9 +54,9 @@
 					const logs = document.createElement("details");
 					
 					card.appendChild(heading);
-					card.appendChild(summary);	
 					card.appendChild(datePost);
 					card.appendChild(logs);			
+					logs.appendChild(summary);	
 					logs.appendChild(content);					
 					
 					post.images.forEach(img =>{
