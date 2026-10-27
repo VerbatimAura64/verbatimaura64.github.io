@@ -31,6 +31,7 @@
 				
 				posts.forEach(post => {
 					const card = document.createElement("div");
+					
 					card.setAttribute("class", "devCard");
 					card.setAttribute("id", post.slug);
 					
@@ -49,19 +50,20 @@
 					const content = document.createElement("p");
 					content.setAttribute("class", "dev-post");
 					content.textContent = post.content;
-					
+
+					const logs = document.createElement("details");
 					
 					card.appendChild(heading);
 					card.appendChild(summary);	
 					card.appendChild(datePost);
-									
-					card.appendChild(content);					
+					card.appendChild(logs);			
+					logs.appendChild(content);					
 					
 					post.images.forEach(img =>{
 						if(img){
 							const image = document.createElement("img");
 							image.src = img;
-							card.appendChild(image);
+							logs.appendChild(image);
 						}
 					});
 
@@ -69,13 +71,13 @@
 						const cslink = document.createElement("a");
 						cslink.textContent = "Read the case study here";
 						cslink.setAttribute('href', post.caseLink);
-						card.appendChild(cslink);
+						logs.appendChild(cslink);
 					}
 					if(post.playLink){
 						const playlink = document.createElement("a");
 						playlink.textContent = "Playtest it here";
 						playlink.setAttribute('href', post.playLink);
-						card.appendChild(playlink);
+						logs.appendChild(playlink);
 					}
 					container.appendChild(card);
 				})
@@ -83,14 +85,7 @@
 				console.error(error.message);
 			}
 		}
-
-		function expandPost(){
-
-		}
-
-		function collapsePost(){
-			
-		}
+		
 
 	</script>
 </head>
