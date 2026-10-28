@@ -826,6 +826,10 @@ details {
     cursor: pointer;
 }
 
+details summary{
+    display: list-item;
+}
+
 details summary:hover {
     color: var(--text);
 }
