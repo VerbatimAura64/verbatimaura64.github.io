@@ -797,7 +797,6 @@ footer div {
     padding: 30px;
 }
 
-
 .devCard a {
     display: inline-block;
     padding: 5px;
@@ -806,6 +805,7 @@ footer div {
     text-decoration: none;
     color: var(--surface);
     background-color: var(--accent);
+    font-weight: 425;
 }
 
 .devCard a:hover{
@@ -818,10 +818,34 @@ footer div {
     font-size: small;
 }
 
-.hook {
+details {
     font-size: large;
     font-weight: 700;
     display: block;
+    color: var(--accent);
+    cursor: pointer;
+}
+
+details summary:hover {
+    color: var(--text);
+}
+
+details summary::marker {
+    content: "▶ ";
+    color: var(--accent);
+}
+
+details:open summary::marker {
+    content: "▼ ";
+    color: var(--muted);
+}
+
+details:open  {
+    color: var(--muted);
+}
+
+details a {
+    font-size: medium;
 }
 
 .dev-post {
