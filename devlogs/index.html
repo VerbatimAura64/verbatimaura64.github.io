@@ -77,6 +77,8 @@
 						const playlink = document.createElement("a");
 						playlink.textContent = "Playtest it here";
 						playlink.setAttribute('href', post.playLink);
+						playlink.setAttribute("target", "_blank")
+						playlink.setAttribute("rel", "noopener noreferrer");
 						logs.appendChild(playlink);
 					}
 					container.appendChild(card);
