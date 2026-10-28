@@ -75,7 +75,7 @@
 "slug":"post-9",
 "playLink": "https://github.com/VerbatimAura64/job-hunt-tracker#job-hunt-tracker",
 "caseLink": "/case_study/job-hunting.html",
-"images": ["/images/railwaypost.jpeg"], 
+"images": ["/images/railwaypost.jpg"], 
 "datePosted":"2026-09-10",
 "content": "Six weeks into my job search, my tracking system was a single markdown file. It worked until it didn't. I could see the structure I'd built, but I'd lost the ability to actually trust it. Which applications needed a follow-up? Which ones had gone quiet? I was Ctrl-F searching my own life. \nSo I built a REST API to fix it. Java, Spring Boot, JPA, PostgreSQL; deployed and live, and it's what actually runs my job search now instead of describing it. A few things I didn't expect going in: \n→ JpaRepository.save() will silently insert a new row instead of failing when an update target doesn't exist — unless you check findById() first. Found that one the hard way. \n→ Railway hands you a Postgres connection string in a format Spring's datasource doesn't accept out of the box. Building the JDBC URL from individual env vars instead of the combined one was the fix. \n→ Migrating data between local and deployed environments is its own small problem — I ended up writing a short script just to move records between the two without ID collisions. \nSix years in Unity and C# taught me one language deeply. This was my first backend-only project outside a game engine — no MonoBehaviours, no game loop, just a request lifecycle and a schema I actually cared about getting right."},
 
