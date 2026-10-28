@@ -56,6 +56,7 @@ body {
 #main {
     padding: 6rem 4rem;
     font-family: var(--font-mono);
+    background-color: var(--surface);
 }
 
 #home {
@@ -810,7 +811,8 @@ footer div {
 
 .devCard a:hover{
     background-color: var(--bg);
-    color: var(--text);
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .post-date {
@@ -831,7 +833,7 @@ details summary{
 }
 
 details summary:hover {
-    color: var(--text);
+    color: var(--muted);
 }
 
 details summary::marker {
@@ -841,11 +843,11 @@ details summary::marker {
 
 details:open summary::marker {
     content: "▼ ";
-    color: var(--muted);
+    color: var(--text);
 }
 
 details:open  {
-    color: var(--muted);
+    color: var(--text);
 }
 
 details a {
